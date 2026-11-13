@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Jean Guilman, desenvolvedor web.">
+
+    <meta name="description" content="Jean Guilman — Desenvolvedor Web e estudante de Engenharia de Software. Criação de sites modernos, responsivos e experiências digitais.">
+
+    <meta name="author" content="Jean Guilman">
+    <meta name="theme-color" content="#080810">
+
     <title>Jean Guilman | Desenvolvedor Web</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -16,31 +22,65 @@
 
 <body>
 
-    <div class="cursor-glow"></div>
+    <!-- TELA DE ABERTURA -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">JG<span>.</span></div>
 
+            <div class="preloader-line">
+                <div class="preloader-progress"></div>
+            </div>
+
+            <p>WELCOME TO MY PORTFOLIO</p>
+
+            <span class="preloader-loading">
+                LOADING EXPERIENCE...
+            </span>
+        </div>
+    </div>
+
+    <!-- EFEITOS DE FUNDO -->
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <!-- CABEÇALHO -->
     <header class="header">
-        <a href="#inicio" class="logo">JG<span>.</span></a>
 
-        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <a href="#inicio" class="logo" aria-label="Jean Guilman - Início">
+            JG<span>.</span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="navegacao"
+            type="button"
+        >
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <nav class="navbar">
+        <nav class="navbar" id="navegacao" aria-label="Navegação principal">
             <a href="#inicio" class="nav-link active">Início</a>
-            <a href="#sobre" class="nav-link">Sobre</a>
-            <a href="#habilidades" class="nav-link">Habilidades</a>
+            <a href="#sobre" class="nav-link">Sobre mim</a>
+            <a href="#trajetoria" class="nav-link">Trajetória</a>
+            <a href="#habilidades" class="nav-link">Tecnologias</a>
             <a href="#projetos" class="nav-link">Projetos</a>
             <a href="#contato" class="nav-link">Contato</a>
         </nav>
 
-        <a href="#contato" class="header-button">Vamos conversar ↗</a>
+        <a href="#contato" class="header-button">
+            Vamos conversar ↗
+        </a>
+
     </header>
 
     <main>
 
-        <!-- INÍCIO -->
+        <!-- =================================
+             INÍCIO
+        ================================== -->
         <section class="hero" id="inicio">
 
             <div class="hero-content reveal">
@@ -52,7 +92,9 @@
 
                 <p class="hero-intro">Olá, eu sou</p>
 
-                <h1>Jean <span>Guilman.</span></h1>
+                <h1>
+                    Jean <span>Guilman.</span>
+                </h1>
 
                 <h2>
                     Desenvolvedor
@@ -61,250 +103,491 @@
                 </h2>
 
                 <p class="hero-description">
-                    Transformo ideias em experiências digitais.
-                    Desenvolvo interfaces modernas, funcionais e
-                    experiências que fazem a diferença na web.
+                    Sou estudante de Engenharia de Software,
+                    apaixonado por tecnologia, criatividade
+                    e desenvolvimento web.
+
+                    Transformo ideias em experiências digitais,
+                    criando sites modernos, funcionais e
+                    responsivos.
                 </p>
 
                 <div class="hero-buttons">
+
                     <a href="#projetos" class="btn btn-primary">
-                        Ver projetos <span>↗</span>
+                        Explorar projetos ↗
                     </a>
 
                     <a href="#sobre" class="btn btn-outline">
-                        Conhecer mais
+                        Sobre mim
                     </a>
+
                 </div>
 
                 <div class="social-links">
-                    <a href="https://github.com/jguilman4-jpg" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+
+                    <a
+                        href="https://github.com/jguilman4-jpg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub ↗
+                    </a>
+
+                    <a
+                        href="https://linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn ↗
+                    </a>
+
                 </div>
+
+                <p class="hero-location">
+                    📍 Rio Bonito do Iguaçu – Paraná, Brasil
+                </p>
 
             </div>
 
+            <!-- JANELA DE CÓDIGO -->
             <div class="hero-visual reveal">
+
                 <div class="orbit orbit-one"></div>
                 <div class="orbit orbit-two"></div>
 
                 <div class="code-card">
+
                     <div class="code-header">
+
                         <div class="window-dots">
-                            <span></span><span></span><span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
+
                         <span>developer.js</span>
+
                     </div>
 
-                    <div class="code-content">
-                        <p><span class="purple">const</span> developer = {</p>
-                        <p class="indent">name: <span class="green">'Jean Guilman'</span>,</p>
-                        <p class="indent">role: <span class="green">'Web Developer'</span>,</p>
-                        <p class="indent">skills: [</p>
-                        <p class="indent2"><span class="orange">'HTML'</span>,</p>
-                        <p class="indent2"><span class="orange">'CSS'</span>,</p>
-                        <p class="indent2"><span class="orange">'JavaScript'</span></p>
-                        <p class="indent">],</p>
-                        <p class="indent">passion: <span class="green">true</span></p>
-                        <p>};</p>
-                        <p class="code-comment">// Building the future.</p>
+                    <div class="code-content" id="codeTyping">
+
+                        <p class="code-line">
+                            <span class="purple">const</span> developer = {
+                        </p>
+
+                        <p class="code-line indent">
+                            name:
+                            <span class="green">'Jean Guilman'</span>,
+                        </p>
+
+                        <p class="code-line indent">
+                            role:
+                            <span class="green">'Web Developer'</span>,
+                        </p>
+
+                        <p class="code-line indent">
+                            education:
+                            <span class="green">'Software Engineering'</span>,
+                        </p>
+
+                        <p class="code-line indent">
+                            location:
+                            <span class="green">'Paraná, Brasil'</span>,
+                        </p>
+
+                        <p class="code-line indent">
+                            skills: [
+                        </p>
+
+                        <p class="code-line indent2">
+                            <span class="orange">'HTML'</span>,
+                        </p>
+
+                        <p class="code-line indent2">
+                            <span class="orange">'CSS'</span>,
+                        </p>
+
+                        <p class="code-line indent2">
+                            <span class="orange">'JavaScript'</span>
+                        </p>
+
+                        <p class="code-line indent">],</p>
+
+                        <p class="code-line indent">
+                            passion: <span class="green">true</span>
+                        </p>
+
+                        <p class="code-line">};</p>
+
+                        <p class="code-line code-comment">
+                            // Do interior para o mundo digital.
+                        </p>
+
+                        <span class="code-typing-cursor"></span>
+
                     </div>
+
                 </div>
 
-                <div class="floating-tag tag-one">&lt; HTML /&gt;</div>
-                <div class="floating-tag tag-two">{ CSS }</div>
-                <div class="floating-tag tag-three">JS ⚡</div>
+                <div class="floating-tag tag-one">
+                    &lt; HTML /&gt;
+                </div>
+
+                <div class="floating-tag tag-two">
+                    { CSS }
+                </div>
+
+                <div class="floating-tag tag-three">
+                    JS ⚡
+                </div>
+
             </div>
 
             <a href="#sobre" class="scroll-indicator">
-                <span></span> ROLE PARA EXPLORAR
+                <span></span>
+                ROLE PARA EXPLORAR
             </a>
 
         </section>
 
-        <!-- SOBRE -->
+        <!-- =================================
+             SOBRE MIM
+        ================================== -->
         <section class="section" id="sobre">
 
             <div class="section-heading reveal">
-                <span class="section-label">01 / SOBRE MIM</span>
-                <h2>Conheça um pouco <span>da minha história.</span></h2>
+
+                <span class="section-label">
+                    01 / SOBRE MIM
+                </span>
+
+                <h2>
+                    Além do código,
+                    <span>existe uma história.</span>
+                </h2>
+
             </div>
 
             <div class="about-grid">
 
                 <div class="about-text reveal">
-                    <h3>Olá! Sou Jean Guilman.</h3>
+
+                    <h3>Prazer, sou Jean Guilman.</h3>
 
                     <p>
-                        Sou desenvolvedor com interesse em tecnologia,
-                        programação e criação de experiências digitais.
+                        Sou natural de Rio Bonito do Iguaçu,
+                        no interior do Paraná. Foi daqui que
+                        começou minha caminhada em direção
+                        ao universo da tecnologia.
                     </p>
 
                     <p>
-                        Trabalho com HTML, CSS e JavaScript, buscando
-                        construir sites modernos, responsivos e com
-                        atenção especial aos detalhes.
+                        Atualmente estudo Engenharia de Software
+                        e venho desenvolvendo conhecimentos em
+                        programação, desenvolvimento web e
+                        criação de experiências digitais.
                     </p>
 
                     <p>
-                        Meu objetivo é continuar evoluindo, aprendendo
-                        novas tecnologias e transformando ideias em
-                        projetos reais.
+                        Tenho interesse em transformar ideias
+                        em soluções digitais, criando sites
+                        com visual moderno, boa organização,
+                        funcionalidade e responsividade.
                     </p>
+
+                    <p>
+                        Acredito que não importa de onde você
+                        começa, mas a dedicação que coloca
+                        em cada passo da sua trajetória.
+                    </p>
+
                 </div>
 
                 <div class="about-card reveal">
+
                     <div class="about-icon">✦</div>
-                    <h3>Desenvolvimento com propósito.</h3>
-                    <p>Design, tecnologia e criatividade trabalhando juntos.</p>
+
+                    <h3>
+                        Grandes ideias podem
+                        nascer de qualquer lugar.
+                    </h3>
+
+                    <p>
+                        Do interior do Paraná para o mundo
+                        digital. Construindo conhecimento,
+                        desenvolvendo projetos e evoluindo
+                        a cada novo desafio.
+                    </p>
+
                     <span>JEAN GUILMAN.DEV</span>
+
                 </div>
 
             </div>
+
         </section>
 
-        <!-- HABILIDADES -->
+        <!-- =================================
+             MINHA TRAJETÓRIA
+        ================================== -->
+        <section class="section journey-section" id="trajetoria">
+
+            <div class="section-heading reveal">
+
+                <span class="section-label">
+                    02 / MINHA TRAJETÓRIA
+                </span>
+
+                <h2>
+                    Minha <span>trajetória.</span>
+                </h2>
+
+                <p>
+                    Cada projeto, cada aprendizado e cada desafio
+                    fazem parte da minha evolução na tecnologia.
+                </p>
+
+            </div>
+
+            <div class="journey-timeline">
+
+                <article class="journey-item reveal">
+
+                    <div class="journey-marker">
+                        <span>01</span>
+                    </div>
+
+                    <div class="journey-card">
+
+                        <span class="journey-label">
+                            PRIMEIROS PASSOS
+                        </span>
+
+                        <h3>O início na tecnologia</h3>
+
+                        <p>
+                            Comecei a explorar o universo do
+                            desenvolvimento, descobrindo como
+                            transformar ideias em soluções digitais
+                            por meio da programação.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="journey-item reveal">
+
+                    <div class="journey-marker">
+                        <span>02</span>
+                    </div>
+
+                    <div class="journey-card">
+
+                        <span class="journey-label">
+                            FORMAÇÃO
+                        </span>
+
+                        <h3>Engenharia de Software</h3>
+
+                        <p>
+                            Atualmente, curso Engenharia de Software,
+                            aprofundando meus conhecimentos em
+                            programação, tecnologia e desenvolvimento
+                            de sistemas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="journey-item reveal">
+
+                    <div class="journey-marker">
+                        <span>03</span>
+                    </div>
+
+                    <div class="journey-card">
+
+                        <span class="journey-label">
+                            NA PRÁTICA
+                        </span>
+
+                        <h3>Transformando ideias em projetos</h3>
+
+                        <p>
+                            Desenvolvo projetos web, explorando
+                            HTML, CSS e JavaScript para criar
+                            experiências modernas, funcionais
+                            e responsivas.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="journey-item reveal">
+
+                    <div class="journey-marker">
+                        <span>04</span>
+                    </div>
+
+                    <div class="journey-card">
+
+                        <span class="journey-label">
+                            PRÓXIMO CAPÍTULO
+                        </span>
+
+                        <h3>Construindo o futuro</h3>
+
+                        <p>
+                            Meu objetivo é continuar evoluindo como
+                            desenvolvedor, criar soluções cada vez
+                            melhores e transformar conhecimento
+                            em oportunidades.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- =================================
+             TECNOLOGIAS
+        ================================== -->
         <section class="section" id="habilidades">
 
             <div class="section-heading reveal">
-                <span class="section-label">02 / HABILIDADES</span>
-                <h2>Minhas <span>tecnologias.</span></h2>
-                <p>Ferramentas que utilizo para transformar ideias em realidade.</p>
+
+                <span class="section-label">
+                    03 / TECNOLOGIAS
+                </span>
+
+                <h2>
+                    Ferramentas para
+                    <span>criar o futuro.</span>
+                </h2>
+
+                <p>
+                    Tecnologias que fazem parte da minha
+                    jornada no desenvolvimento web.
+                </p>
+
             </div>
 
             <div class="skills-grid">
 
                 <article class="skill-card reveal">
+
                     <div class="skill-icon html-icon">5</div>
+
                     <h3>HTML5</h3>
-                    <p>Estruturação semântica e acessível de páginas web.</p>
-                    <span>DESENVOLVIMENTO WEB</span>
+
+                    <p>
+                        Estruturação de páginas com organização,
+                        semântica e acessibilidade.
+                    </p>
+
+                    <span>ESTRUTURA WEB</span>
+
                 </article>
 
                 <article class="skill-card reveal">
+
                     <div class="skill-icon css-icon">3</div>
+
                     <h3>CSS3</h3>
-                    <p>Interfaces modernas, responsivas e animações.</p>
-                    <span>ESTILIZAÇÃO</span>
+
+                    <p>
+                        Criação de interfaces modernas,
+                        layouts responsivos e animações.
+                    </p>
+
+                    <span>DESIGN E ESTILIZAÇÃO</span>
+
                 </article>
 
                 <article class="skill-card reveal">
+
                     <div class="skill-icon js-icon">JS</div>
+
                     <h3>JavaScript</h3>
-                    <p>Interatividade e funcionalidades dinâmicas.</p>
+
+                    <p>
+                        Interatividade, lógica de programação
+                        e funcionalidades dinâmicas.
+                    </p>
+
                     <span>PROGRAMAÇÃO</span>
+
                 </article>
 
             </div>
+
         </section>
 
-        <!-- PROJETOS -->
+        <!-- =================================
+             PROJETOS
+        ================================== -->
         <section class="section" id="projetos">
 
             <div class="section-heading reveal">
-                <span class="section-label">03 / PORTFÓLIO</span>
-                <h2>Projetos em <span>destaque.</span></h2>
-                <p>Conheça alguns dos meus projetos e desenvolvimentos.</p>
+
+                <span class="section-label">
+                    04 / PORTFÓLIO
+                </span>
+
+                <h2>
+                    Projetos que
+                    <span>ganham vida.</span>
+                </h2>
+
+                <p>
+                    Projetos e experiências que representam
+                    minha evolução no desenvolvimento web.
+                </p>
+
             </div>
 
             <div class="projects-grid">
 
-                <!-- PROJETO 01 -->
-                <article class="project-card reveal">
-                    <div class="project-preview preview-one">
-                        <span>01</span>
-                        <div class="preview-content">
-                            <div class="preview-logo">JG.</div>
-                            <h3>Creative<br>Digital.</h3>
-                            <p>DESIGN YOUR FUTURE</p>
-                        </div>
-                    </div>
-
-                    <div class="project-info">
-                        <div>
-                            <h3>Projeto Portfólio</h3>
-                            <p>Site pessoal moderno e responsivo.</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                    </div>
-                </article>
-
-                <!-- PROJETO 02 -->
-                <article class="project-card reveal">
-                    <div class="project-preview preview-two">
-                        <span>02</span>
-                        <div class="preview-content">
-                            <div class="preview-logo">NOVA</div>
-                            <h3>Technology<br>Store.</h3>
-                            <p>THE NEXT GENERATION</p>
-                        </div>
-                    </div>
-
-                    <div class="project-info">
-                        <div>
-                            <h3>Loja Virtual</h3>
-                            <p>Conceito de e-commerce tecnológico.</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                    </div>
-                </article>
-
-                <!-- PROJETO 03 -->
-                <article class="project-card reveal">
-                    <div class="project-preview preview-three">
-                        <span>03</span>
-                        <div class="preview-content">
-                            <div class="preview-logo">APP.</div>
-                            <h3>Smart<br>Dashboard.</h3>
-                            <p>CONTROL YOUR WORLD</p>
-                        </div>
-                    </div>
-
-                    <div class="project-info">
-                        <div>
-                            <h3>Dashboard</h3>
-                            <p>Interface de painel administrativo.</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
-                    </div>
-                </article>
-
-                <!-- PROJETO 04 - COLÉGIO IRENO ALVES -->
+                <!-- PROJETO REAL -->
                 <article class="project-card reveal">
 
                     <div class="project-preview preview-one">
-                        <span>04</span>
+
+                        <span>01 / PROJETO REAL</span>
+
                         <div class="preview-content">
+
                             <div class="preview-logo">CIA.</div>
-                            <h3>Colégio<br>Ireno Alves.</h3>
+
+                            <h3>
+                                Colégio<br>Ireno Alves.
+                            </h3>
+
                             <p>EDUCAÇÃO E FUTURO</p>
+
                         </div>
+
                     </div>
 
                     <div class="project-info">
+
                         <div>
+
                             <h3>Site Institucional</h3>
+
                             <p>
-                                Site desenvolvido para o Colégio Estadual
-                                do Campo Ireno Alves dos Santos.
+                                Plataforma digital do Colégio
+                                Estadual do Campo Ireno Alves
+                                dos Santos.
                             </p>
+
                         </div>
 
                         <a
@@ -312,14 +595,17 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             class="project-arrow"
-                            aria-label="Visitar projeto"
-                        >↗</a>
+                            aria-label="Visitar site do Colégio Ireno Alves"
+                        >
+                            ↗
+                        </a>
+
                     </div>
 
                     <div class="project-tags">
                         <span>HTML</span>
                         <span>CSS</span>
-                        <span>JS</span>
+                        <span>JavaScript</span>
                     </div>
 
                     <a
@@ -333,37 +619,209 @@
 
                 </article>
 
+                <!-- PROJETO CONCEITUAL -->
+                <article class="project-card reveal">
+
+                    <div class="project-preview preview-two">
+
+                        <span>02 / CONCEITO</span>
+
+                        <div class="preview-content">
+
+                            <div class="preview-logo">NOVA</div>
+
+                            <h3>
+                                Technology<br>Store.
+                            </h3>
+
+                            <p>THE NEXT GENERATION</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <div>
+
+                            <h3>Loja Virtual</h3>
+
+                            <p>
+                                Conceito de interface para
+                                comércio eletrônico.
+                            </p>
+
+                        </div>
+
+                        <span class="project-arrow">↗</span>
+
+                    </div>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                </article>
+
+                <!-- PROJETO CONCEITUAL -->
+                <article class="project-card reveal">
+
+                    <div class="project-preview preview-three">
+
+                        <span>03 / CONCEITO</span>
+
+                        <div class="preview-content">
+
+                            <div class="preview-logo">APP.</div>
+
+                            <h3>
+                                Smart<br>Dashboard.
+                            </h3>
+
+                            <p>CONTROL YOUR WORLD</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-info">
+
+                        <div>
+
+                            <h3>Dashboard</h3>
+
+                            <p>
+                                Conceito de painel administrativo
+                                com interface digital.
+                            </p>
+
+                        </div>
+
+                        <span class="project-arrow">↗</span>
+
+                    </div>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                </article>
+
             </div>
+
         </section>
 
-        <!-- CONTATO -->
+        <!-- =================================
+             CONTATO
+        ================================== -->
         <section class="section contact-section" id="contato">
 
             <div class="contact-box reveal">
-                <span class="section-label">04 / CONTATO</span>
 
-                <h2>Vamos criar algo<br><span>incrível juntos?</span></h2>
+                <span class="section-label">
+                    05 / CONTATO
+                </span>
+
+                <h2>
+                    Tem uma ideia?
+                    <br>
+                    <span>Vamos tirar do papel.</span>
+                </h2>
 
                 <p>
-                    Tem uma ideia ou projeto em mente?
-                    Entre em contato. Será um prazer conversar!
+                    Estou aberto a conhecer novas ideias,
+                    conversar sobre projetos e criar
+                    experiências digitais.
                 </p>
 
-                <a href="mailto:jguilman4@gmail.com" class="btn btn-primary">
+                <a
+                    href="mailto:jguilman4@gmail.com"
+                    class="btn btn-primary"
+                >
                     Enviar um e-mail ↗
                 </a>
+
+                <div class="social-links">
+
+                    <a
+                        href="https://github.com/jguilman4-jpg"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub ↗
+                    </a>
+
+                    <a
+                        href="https://linkedin.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn ↗
+                    </a>
+
+                </div>
+
             </div>
 
         </section>
 
     </main>
 
+    <!-- =================================
+         RODAPÉ
+    ================================== -->
     <footer>
-        <a href="#inicio" class="logo">JG<span>.</span></a>
-        <p>© <span id="year"></span> Jean Guilman. Todos os direitos reservados.</p>
-        <a href="#inicio">VOLTAR AO TOPO ↑</a>
+
+        <a href="#inicio" class="logo">
+            JG<span>.</span>
+        </a>
+
+        <p>
+            © <span id="year"></span>
+            Jean Guilman. Todos os direitos reservados.
+        </p>
+
+        <p>
+            Rio Bonito do Iguaçu – Paraná, Brasil 🇧🇷
+        </p>
+
+        <a href="#inicio">
+            VOLTAR AO TOPO ↑
+        </a>
+
     </footer>
 
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
+
+    <!-- PRELOADER -->
+    <script>
+        (() => {
+            const preloader = document.getElementById("preloader");
+
+            if (!preloader) return;
+
+            const hidePreloader = () => {
+                preloader.classList.add("loaded");
+
+                setTimeout(() => {
+                    preloader.remove();
+                }, 900);
+            };
+
+            if (document.readyState === "complete") {
+                setTimeout(hidePreloader, 900);
+            } else {
+                window.addEventListener("load", () => {
+                    setTimeout(hidePreloader, 900);
+                }, { once: true });
+            }
+        })();
+    </script>
+
 </body>
 </html>

@@ -1,14 +1,21 @@
+/* ==========================================
+   JEAN GUILMAN.DEV
+   PORTFÓLIO PROFISSIONAL — IDENTIDADE ROXA
+   ========================================== */
 
+/* CORES */
 :root {
-    --bg: #080810;
-    --surface: #11111d;
+    --bg: #070b14;
+    --surface: #0d1422;
+    --surface-light: #111c2e;
     --purple: #a855f7;
-    --blue: #6366f1;
-    --white: #f5f3ff;
-    --muted: #9292a8;
-    --border: rgba(255,255,255,.09);
+    --purple-light: #c084fc;
+    --white: #f5f8ff;
+    --muted: #94a3b8;
+    --border: rgba(148, 163, 184, .13);
 }
 
+/* CONFIGURAÇÕES GERAIS */
 * {
     margin: 0;
     padding: 0;
@@ -38,7 +45,6 @@ button {
 }
 
 /* FUNDO */
-
 body::before {
     content: "";
     position: fixed;
@@ -48,7 +54,20 @@ body::before {
     background-image:
         linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
-    background-size: 45px 45px;
+    background-size: 48px 48px;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    top: -250px;
+    right: -200px;
+    background: rgba(168, 85, 247, .10);
+    filter: blur(130px);
+    pointer-events: none;
+    z-index: -1;
 }
 
 .cursor-glow {
@@ -56,18 +75,17 @@ body::before {
     width: 350px;
     height: 350px;
     border-radius: 50%;
-    background: rgba(126, 34, 206, .09);
-    filter: blur(90px);
+    background: rgba(168, 85, 247, .10);
+    filter: blur(100px);
     pointer-events: none;
     z-index: -1;
     transform: translate(-50%, -50%);
 }
 
 /* HEADER */
-
 .header {
     width: 100%;
-    height: 85px;
+    height: 82px;
     padding: 0 8%;
     display: flex;
     justify-content: space-between;
@@ -75,16 +93,16 @@ body::before {
     position: fixed;
     top: 0;
     z-index: 100;
-    background: rgba(8,8,16,.78);
+    background: rgba(7, 11, 20, .88);
     backdrop-filter: blur(18px);
     border-bottom: 1px solid var(--border);
 }
 
 .logo {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 800;
-    letter-spacing: -2px;
+    letter-spacing: -1.5px;
 }
 
 .logo span {
@@ -104,20 +122,21 @@ body::before {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--purple);
+    color: var(--purple-light);
 }
 
 .header-button {
-    padding: 12px 18px;
-    border: 1px solid rgba(168,85,247,.5);
-    border-radius: 8px;
+    padding: 12px 20px;
+    border: 1px solid rgba(168, 85, 247, .45);
+    border-radius: 7px;
     font-size: 12px;
     transition: .3s;
 }
 
 .header-button:hover {
     background: var(--purple);
-    box-shadow: 0 0 25px rgba(168,85,247,.3);
+    border-color: var(--purple);
+    box-shadow: 0 0 25px rgba(168, 85, 247, .22);
 }
 
 .menu-toggle {
@@ -136,15 +155,14 @@ body::before {
     transition: .3s;
 }
 
-/* HERO */
-
+/* INÍCIO / HERO */
 .hero {
     min-height: 100vh;
     padding: 150px 10% 100px;
     display: grid;
     grid-template-columns: 1.1fr .9fr;
     align-items: center;
-    gap: 50px;
+    gap: 55px;
     position: relative;
 }
 
@@ -154,10 +172,15 @@ body::before {
     width: 450px;
     height: 450px;
     top: 20%;
-    left: 20%;
-    background: rgba(124,58,237,.09);
-    filter: blur(120px);
+    left: 12%;
+    background: rgba(168, 85, 247, .10);
+    filter: blur(130px);
     pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .status {
@@ -169,8 +192,9 @@ body::before {
     padding: 10px 16px;
     font-size: 10px;
     letter-spacing: 1.5px;
-    color: #c4b5fd;
-    margin-bottom: 30px;
+    color: var(--purple-light);
+    margin-bottom: 28px;
+    background: rgba(168, 85, 247, .06);
 }
 
 .status-dot {
@@ -184,34 +208,34 @@ body::before {
 
 .hero-intro {
     color: var(--muted);
-    font-size: 18px;
-    margin-bottom: 8px;
+    font-size: 17px;
+    margin-bottom: 10px;
 }
 
 .hero h1 {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(55px, 7vw, 95px);
+    font-size: clamp(55px, 7vw, 88px);
     letter-spacing: -5px;
-    line-height: 1.1;
+    line-height: 1.08;
 }
 
 .hero h1 span,
 .section-heading h2 span,
 .contact-box h2 span {
-    background: linear-gradient(90deg, #c084fc, #6366f1);
+    background: linear-gradient(90deg, #d8b4fe, #9333ea);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
 
 .hero h2 {
-    font-size: 24px;
-    margin-top: 18px;
+    font-size: 23px;
+    margin-top: 20px;
     font-weight: 500;
 }
 
 .typing {
-    color: var(--purple);
+    color: var(--purple-light);
 }
 
 .typing-cursor {
@@ -222,7 +246,7 @@ body::before {
 .hero-description {
     color: var(--muted);
     line-height: 1.9;
-    max-width: 500px;
+    max-width: 510px;
     margin-top: 25px;
     font-size: 14px;
 }
@@ -237,38 +261,41 @@ body::before {
 .btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
-    padding: 16px 25px;
-    border-radius: 8px;
+    padding: 15px 24px;
+    border-radius: 7px;
     font-size: 13px;
     font-weight: 600;
     transition: .3s;
 }
 
 .btn-primary {
-    background: linear-gradient(110deg, #9333ea, #6366f1);
-    box-shadow: 0 5px 25px rgba(124,58,237,.2);
+    background: linear-gradient(110deg, #9333ea, #a855f7);
+    color: white;
+    box-shadow: 0 5px 25px rgba(168, 85, 247, .2);
 }
 
 .btn-primary:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 35px rgba(124,58,237,.4);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 35px rgba(168, 85, 247, .35);
 }
 
 .btn-outline {
     border: 1px solid var(--border);
+    color: var(--white);
 }
 
 .btn-outline:hover {
     border-color: var(--purple);
-    color: #c084fc;
-    transform: translateY(-5px);
+    color: var(--purple-light);
+    transform: translateY(-4px);
 }
 
 .social-links {
     display: flex;
     gap: 25px;
-    margin-top: 40px;
+    margin-top: 38px;
 }
 
 .social-links a {
@@ -278,11 +305,10 @@ body::before {
 }
 
 .social-links a:hover {
-    color: var(--purple);
+    color: var(--purple-light);
 }
 
-/* CARD DE CÓDIGO */
-
+/* VISUAL DE CÓDIGO */
 .hero-visual {
     min-height: 420px;
     display: flex;
@@ -296,12 +322,12 @@ body::before {
     max-width: 390px;
     position: relative;
     z-index: 2;
-    background: rgba(20,20,35,.9);
-    border: 1px solid rgba(168,85,247,.25);
-    border-radius: 15px;
-    box-shadow: 0 20px 80px rgba(0,0,0,.5),
+    background: rgba(13, 20, 34, .95);
+    border: 1px solid rgba(168, 85, 247, .28);
+    border-radius: 14px;
+    box-shadow: 0 20px 80px rgba(0,0,0,.45),
                 0 0 40px rgba(168,85,247,.08);
-    transform: rotate(-3deg);
+    transform: rotate(-2deg);
     animation: float 5s ease-in-out infinite;
 }
 
@@ -339,7 +365,7 @@ body::before {
     font-family: monospace;
     font-size: 12px;
     line-height: 2.2;
-    color: #d4d4e8;
+    color: #d4dce9;
 }
 
 .indent {
@@ -363,13 +389,13 @@ body::before {
 }
 
 .code-comment {
-    color: #71717a;
+    color: #64748b;
     margin-top: 10px;
 }
 
 .orbit {
     position: absolute;
-    border: 1px solid rgba(168,85,247,.18);
+    border: 1px solid rgba(168, 85, 247, .18);
     border-radius: 50%;
 }
 
@@ -388,8 +414,8 @@ body::before {
     position: absolute;
     padding: 12px 18px;
     border-radius: 8px;
-    background: #171526;
-    border: 1px solid rgba(168,85,247,.3);
+    background: #1b1230;
+    border: 1px solid rgba(168, 85, 247, .35);
     color: #d8b4fe;
     font-size: 12px;
     z-index: 3;
@@ -433,9 +459,9 @@ body::before {
 }
 
 /* SEÇÕES */
-
 .section {
-    padding: 120px 10%;
+    padding: 115px 10%;
+    position: relative;
 }
 
 .section-heading {
@@ -443,7 +469,7 @@ body::before {
 }
 
 .section-label {
-    color: var(--purple);
+    color: var(--purple-light);
     font-size: 11px;
     letter-spacing: 3px;
     font-weight: 700;
@@ -460,10 +486,10 @@ body::before {
     color: var(--muted);
     font-size: 14px;
     margin-top: 15px;
+    line-height: 1.8;
 }
 
 /* SOBRE */
-
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -474,6 +500,7 @@ body::before {
 .about-text h3 {
     font-size: 24px;
     margin-bottom: 20px;
+    line-height: 1.4;
 }
 
 .about-text p {
@@ -486,25 +513,25 @@ body::before {
 .about-card {
     padding: 45px;
     border: 1px solid var(--border);
-    border-radius: 15px;
-    background: linear-gradient(145deg, #171529, #10101a);
+    border-radius: 14px;
+    background: linear-gradient(145deg, #201432, #0d1422);
     transition: .4s;
 }
 
 .about-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--purple);
+    transform: translateY(-7px);
+    border-color: rgba(168, 85, 247, .55);
 }
 
 .about-icon {
-    font-size: 50px;
-    color: var(--purple);
+    font-size: 48px;
+    color: var(--purple-light);
     margin-bottom: 25px;
 }
 
 .about-card h3 {
     font-size: 25px;
-    max-width: 250px;
+    max-width: 270px;
     line-height: 1.4;
 }
 
@@ -517,14 +544,13 @@ body::before {
 
 .about-card > span {
     display: block;
-    margin-top: 45px;
+    margin-top: 40px;
     font-size: 10px;
-    letter-spacing: 3px;
-    color: var(--purple);
+    letter-spacing: 2px;
+    color: var(--purple-light);
 }
 
 /* HABILIDADES */
-
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -536,13 +562,13 @@ body::before {
     border: 1px solid var(--border);
     border-radius: 12px;
     background: var(--surface);
-    transition: .4s;
+    transition: .35s;
 }
 
 .skill-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--purple);
-    box-shadow: 0 15px 40px rgba(124,58,237,.1);
+    transform: translateY(-8px);
+    border-color: rgba(168, 85, 247, .5);
+    box-shadow: 0 15px 40px rgba(168, 85, 247, .10);
 }
 
 .skill-icon {
@@ -553,7 +579,7 @@ body::before {
     border-radius: 12px;
     font-size: 27px;
     font-weight: 800;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .html-icon {
@@ -588,11 +614,10 @@ body::before {
     margin-top: 25px;
     font-size: 9px;
     letter-spacing: 2px;
-    color: var(--purple);
+    color: var(--purple-light);
 }
 
 /* PROJETOS */
-
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -604,12 +629,13 @@ body::before {
     border-radius: 12px;
     overflow: hidden;
     background: var(--surface);
-    transition: .4s;
+    transition: .35s;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--purple);
+    transform: translateY(-8px);
+    border-color: rgba(168, 85, 247, .55);
+    box-shadow: 0 18px 45px rgba(0,0,0,.25);
 }
 
 .project-preview {
@@ -623,15 +649,15 @@ body::before {
 }
 
 .preview-one {
-    background: radial-gradient(circle at 50% 50%, #5420a0, #10101b 75%);
+    background: radial-gradient(circle at 50% 50%, #5b21b6, #0b1220 75%);
 }
 
 .preview-two {
-    background: radial-gradient(circle at 50% 50%, #164e63, #10101b 75%);
+    background: radial-gradient(circle at 50% 50%, #6b21a8, #0b1220 75%);
 }
 
 .preview-three {
-    background: radial-gradient(circle at 50% 50%, #3730a3, #10101b 75%);
+    background: radial-gradient(circle at 50% 50%, #4c1d95, #0b1220 75%);
 }
 
 .project-preview > span {
@@ -639,7 +665,7 @@ body::before {
     top: 15px;
     left: 20px;
     font-size: 11px;
-    color: #c4b5fd;
+    color: #d8b4fe;
 }
 
 .preview-content {
@@ -650,7 +676,7 @@ body::before {
     font-size: 20px;
     font-weight: 800;
     letter-spacing: 4px;
-    color: #d8b4fe;
+    color: #e9d5ff;
 }
 
 .preview-content h3 {
@@ -662,7 +688,7 @@ body::before {
 .preview-content p {
     font-size: 8px;
     letter-spacing: 3px;
-    color: #c4b5fd;
+    color: #d8b4fe;
     margin-top: 15px;
 }
 
@@ -681,39 +707,45 @@ body::before {
     color: var(--muted);
     font-size: 11px;
     margin-top: 8px;
+    line-height: 1.6;
 }
 
 .project-arrow {
     font-size: 23px;
-    color: var(--purple);
+    color: var(--purple-light);
+    transition: .3s;
+}
+
+.project-card:hover .project-arrow {
+    transform: translate(4px, -4px);
 }
 
 .project-tags {
     display: flex;
     gap: 8px;
     padding: 15px 20px 20px;
+    flex-wrap: wrap;
 }
 
 .project-tags span {
     font-size: 9px;
-    color: #c4b5fd;
+    color: #d8b4fe;
     padding: 6px 9px;
-    background: rgba(168,85,247,.1);
+    background: rgba(168, 85, 247, .12);
     border-radius: 4px;
 }
 
 /* CONTATO */
-
 .contact-section {
     padding-bottom: 130px;
 }
 
 .contact-box {
     text-align: center;
-    padding: 90px 30px;
-    border: 1px solid rgba(168,85,247,.2);
-    border-radius: 20px;
-    background: radial-gradient(ellipse at center, #24143e 0%, #10101b 70%);
+    padding: 85px 30px;
+    border: 1px solid rgba(168, 85, 247, .22);
+    border-radius: 18px;
+    background: radial-gradient(ellipse at center, #24113d 0%, #0d1422 70%);
 }
 
 .contact-box h2 {
@@ -732,7 +764,6 @@ body::before {
 }
 
 /* FOOTER */
-
 footer {
     padding: 30px 10%;
     border-top: 1px solid var(--border);
@@ -750,25 +781,36 @@ footer > a:last-child {
 
 footer > a:last-child {
     letter-spacing: 1px;
+    transition: .3s;
+}
+
+footer > a:last-child:hover {
+    color: var(--purple-light);
 }
 
 /* ANIMAÇÕES */
-
 @keyframes pulse {
-    50% { opacity: .4; transform: scale(.8); }
+    50% {
+        opacity: .4;
+        transform: scale(.8);
+    }
 }
 
 @keyframes blink {
-    50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
 @keyframes float {
-    50% { transform: rotate(-1deg) translateY(-15px); }
+    50% {
+        transform: rotate(-1deg) translateY(-12px);
+    }
 }
 
 .reveal {
     opacity: 0;
-    transform: translateY(35px);
+    transform: translateY(30px);
     transition: opacity .8s ease, transform .8s ease;
 }
 
@@ -778,7 +820,6 @@ footer > a:last-child {
 }
 
 /* RESPONSIVIDADE */
-
 @media (max-width: 1000px) {
     .header {
         padding: 0 5%;
@@ -825,7 +866,7 @@ footer > a:last-child {
         padding: 25px;
         display: none;
         flex-direction: column;
-        background: #10101b;
+        background: #0d1422;
         border-bottom: 1px solid var(--border);
     }
 
@@ -839,7 +880,7 @@ footer > a:last-child {
 
     .hero {
         grid-template-columns: 1fr;
-        padding-top: 150px;
+        padding-top: 140px;
         gap: 20px;
     }
 
@@ -848,7 +889,7 @@ footer > a:last-child {
     }
 
     .hero-visual {
-        min-height: 400px;
+        min-height: 380px;
         margin-top: 20px;
     }
 
@@ -897,7 +938,7 @@ footer > a:last-child {
     }
 
     .hero h1 {
-        font-size: 52px;
+        font-size: 48px;
     }
 
     .hero h2 {
@@ -913,10 +954,21 @@ footer > a:last-child {
         font-size: 10px;
         padding: 9px;
     }
+
+    .about-card {
+        padding: 30px;
+    }
+
+    .btn {
+        padding: 14px 18px;
+    }
 }
 
+/* ACESSIBILIDADE */
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
         scroll-behavior: auto !important;
         animation-duration: .01ms !important;
         transition-duration: .01ms !important;
@@ -925,5 +977,1182 @@ footer > a:last-child {
     .reveal {
         opacity: 1;
         transform: none;
+    }
+}
+/* =====================================
+   ANIMAÇÕES EXTRAS - JEAN GUILMAN.DEV
+   FUNDO ANIMADO ROXO
+===================================== */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Luzes roxas no fundo */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(100px);
+    opacity: 0.20;
+}
+
+body::before {
+    background: #8b5cf6;
+    top: 5%;
+    left: -180px;
+    animation: luzFlutuante1 12s ease-in-out infinite alternate;
+}
+
+body::after {
+    background: #a855f7;
+    right: -180px;
+    bottom: 5%;
+    animation: luzFlutuante2 15s ease-in-out infinite alternate;
+}
+
+/* Movimento das luzes */
+@keyframes luzFlutuante1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(120px, 180px);
+    }
+}
+
+@keyframes luzFlutuante2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-140px, -160px);
+    }
+}
+
+/* Animação dos cards */
+.project-card,
+.skill-card,
+.about-card {
+    transition: transform 0.4s ease, border-color 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.project-card:hover,
+.skill-card:hover,
+.about-card:hover {
+    transform: translateY(-8px);
+    border-color: #a855f7;
+    box-shadow: 0 12px 35px rgba(139, 92, 246, 0.16);
+}
+
+/* Botões com efeito */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+}
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    body::before,
+    body::after {
+        animation: none;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =====================================
+   HERO ANIMADO - JEAN GUILMAN.DEV
+===================================== */
+
+/* Gradiente animado no nome */
+.hero h1,
+.hero h1 span {
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #c084fc,
+        #9333ea,
+        #ffffff
+    );
+
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: gradientName 5s linear infinite;
+}
+
+@keyframes gradientName {
+    to {
+        background-position: 300% center;
+    }
+}
+
+/* Entrada cinematográfica */
+.hero h1 {
+    animation:
+        heroEntrance 1s ease forwards,
+        gradientName 5s linear infinite;
+}
+
+.hero p {
+    animation: fadeUp 1s ease 0.3s both;
+}
+
+.hero .btn {
+    animation: fadeUp 1s ease 0.6s both;
+}
+
+.hero .code-card {
+    animation: codeEntrance 1.2s ease 0.4s both;
+}
+
+@keyframes heroEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes codeEntrance {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Brilho elegante nos botões */
+.btn {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255,255,255,0.25),
+        transparent
+    );
+    transition: left 0.6s ease;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    left: 130%;
+}
+
+.btn:hover {
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.35);
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .hero h1,
+    .hero p,
+    .hero .btn,
+    .hero .code-card {
+        animation: none;
+    }
+}
+
+/* =====================================
+   JANELA DE CÓDIGO - EFEITO DIGITAÇÃO
+===================================== */
+
+.code-content .code-line {
+    opacity: 0;
+    transform: translateX(-12px);
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+.code-content.is-typing .code-line {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: var(--line-delay, 0ms);
+}
+
+/* Cursor piscando */
+.code-typing-cursor {
+    display: inline-block;
+    width: 7px;
+    height: 17px;
+    margin-left: 4px;
+    vertical-align: middle;
+    background: #a855f7;
+    box-shadow: 0 0 12px #a855f7;
+    animation: codeCursorBlink 0.8s infinite;
+}
+
+@keyframes codeCursorBlink {
+    0%, 49% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Brilho discreto na janela */
+.code-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.code-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(139, 92, 246, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .code-content .code-line {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .code-typing-cursor {
+        animation: none;
+    }
+}
+
+/* =====================================
+   EFEITOS PREMIUM - JG.DEV
+===================================== */
+
+/* Borda roxa animada */
+.project-card,
+.skill-card,
+.about-card {
+    position: relative;
+    isolation: isolate;
+}
+
+.project-card::after,
+.skill-card::after,
+.about-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        #9333ea,
+        #c084fc,
+        transparent
+    );
+    background-size: 250% 250%;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    transition: opacity 0.4s ease;
+}
+
+.project-card:hover::after,
+.skill-card:hover::after,
+.about-card:hover::after {
+    opacity: 1;
+    animation: borderGlow 3s linear infinite;
+}
+
+@keyframes borderGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 250% 50%;
+    }
+}
+
+/* Ícones com movimento suave */
+.skill-icon {
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+.skill-card:nth-child(2) .skill-icon {
+    animation-delay: 0.4s;
+}
+
+.skill-card:nth-child(3) .skill-icon {
+    animation-delay: 0.8s;
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+/* Brilho nos links sociais */
+.social-links a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #c084fc;
+    transform: translateY(-3px);
+}
+
+/* Linha de progresso da página */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        #7e22ce,
+        #c084fc,
+        #e9d5ff
+    );
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.7);
+    z-index: 9999;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skill-icon {
+        animation: none;
+    }
+
+    .project-card::after,
+    .skill-card::after,
+    .about-card::after {
+        animation: none !important;
+    }
+}
+
+/* =====================================
+   GLASSMORPHISM - JG GUILMAN.DEV
+===================================== */
+
+.project-card,
+.skill-card,
+.about-card {
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(25, 18, 40, 0.48);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(168, 85, 247, 0.20);
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Brilho suave no topo dos cards */
+.project-card::before,
+.skill-card::before,
+.about-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(192, 132, 252, 0.75),
+        transparent
+    );
+
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+/* Movimento ao passar o mouse */
+.project-card:hover,
+.skill-card:hover,
+.about-card:hover {
+    transform: translateY(-8px);
+
+    background: rgba(45, 25, 68, 0.62);
+    border-color: rgba(192, 132, 252, 0.48);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.30),
+        0 0 28px rgba(168, 85, 247, 0.13),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+}
+
+/* Ícones com profundidade */
+.skill-icon {
+    filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.25));
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 18px rgba(192, 132, 252, 0.55));
+}
+
+/* Acessibilidade: reduzir movimentos */
+@media (prefers-reduced-motion: reduce) {
+    .project-card,
+    .skill-card,
+    .about-card,
+    .skill-icon {
+        transition: none;
+    }
+
+    .project-card:hover,
+    .skill-card:hover,
+    .about-card:hover {
+        transform: none;
+    }
+}
+
+/* =====================================
+   ANIMAÇÃO CINEMATOGRÁFICA DAS SEÇÕES
+===================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(45px) scale(0.98);
+    filter: blur(6px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.9s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+/* Entrada suave dos títulos */
+.section-title,
+.section-subtitle {
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Pequeno atraso nos elementos internos */
+.section.visible .project-card,
+.section.visible .skill-card,
+.section.visible .about-card {
+    animation: cinematicCard 0.8s ease both;
+}
+
+.section.visible .project-card:nth-child(2),
+.section.visible .skill-card:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.section.visible .project-card:nth-child(3),
+.section.visible .skill-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes cinematicCard {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Respeita quem prefere menos animações */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition: none;
+    }
+
+    .section.visible .project-card,
+    .section.visible .skill-card,
+    .section.visible .about-card {
+        animation: none;
+    }
+}
+
+/* =====================================
+   EFEITO PARALLAX - MOVIMENTO DO MOUSE
+===================================== */
+
+.code-card {
+    translate: var(--parallax-x, 0px) var(--parallax-y, 0px);
+    transition: translate 0.25s ease-out;
+    will-change: translate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .code-card {
+        translate: none;
+        transition: none;
+    }
+}
+
+/* =====================================
+   FUNDO INTERATIVO - PARTÍCULAS
+===================================== */
+
+#particles-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+/* Luz ambiente acompanha o mouse */
+.mouse-light {
+    position: fixed;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+
+    background: radial-gradient(
+        circle,
+        rgba(147, 51, 234, 0.12),
+        rgba(147, 51, 234, 0.04) 40%,
+        transparent 70%
+    );
+
+    transform: translate(-50%, -50%);
+    transition: left 0.12s ease, top 0.12s ease;
+    mix-blend-mode: screen;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mouse-light {
+        display: none;
+    }
+}
+
+/* =====================================
+   BRILHO PREMIUM - JEAN GUILMAN
+===================================== */
+
+.hero h1 span {
+    background: linear-gradient(
+        110deg,
+        #9333ea 0%,
+        #c084fc 25%,
+        #ffffff 45%,
+        #a855f7 60%,
+        #7e22ce 100%
+    );
+
+    background-size: 250% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: jeanPurpleShine 5s linear infinite;
+
+    filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.25));
+}
+
+@keyframes jeanPurpleShine {
+    0% {
+        background-position: 200% center;
+    }
+
+    100% {
+        background-position: -200% center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero h1 span {
+        animation: none;
+        background-position: center;
+    }
+}
+
+/* =====================================
+   BOTÕES PREMIUM - JG GUILMAN.DEV
+===================================== */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+/* Reflexo de luz passando pelo botão */
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -130%;
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255, 255, 255, 0.25),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+    transition: left 0.65s ease;
+    z-index: -1;
+}
+
+.btn:hover::before {
+    left: 150%;
+}
+
+/* Efeito ao passar o mouse */
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 8px 25px rgba(147, 51, 234, 0.28),
+        0 0 18px rgba(168, 85, 247, 0.18);
+}
+
+/* Borda do botão secundário */
+.btn-secondary:hover {
+    border-color: #c084fc;
+    box-shadow: 0 0 22px rgba(168, 85, 247, 0.20);
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .btn,
+    .btn::before {
+        transition: none;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+}
+
+/* =====================================
+   JG - PREMIUM PRELOADER
+===================================== */
+
+#preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #090711;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
+
+#preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.preloader-content {
+    width: min(320px, 80%);
+    text-align: center;
+    animation: preloaderEntrance 1s ease both;
+}
+
+.preloader-logo {
+    font-size: 76px;
+    font-weight: 900;
+    letter-spacing: -6px;
+
+    color: #ffffff;
+
+    text-shadow: 0 0 30px rgba(168, 85, 247, 0.35);
+
+    animation: logoPulse 2s ease-in-out infinite;
+}
+
+.preloader-logo span {
+    color: #a855f7;
+}
+
+.preloader-line {
+    width: 100%;
+    height: 3px;
+    margin: 28px 0 22px;
+
+    background: rgba(168, 85, 247, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.preloader-progress {
+    width: 40%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #7e22ce,
+        #c084fc,
+        #ffffff
+    );
+
+    border-radius: 20px;
+    animation: loadingBar 1.5s ease-in-out infinite;
+}
+
+.preloader-content p {
+    color: #e9d5ff;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.preloader-loading {
+    display: block;
+    margin-top: 12px;
+
+    color: #888099;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+@keyframes loadingBar {
+    0% {
+        transform: translateX(-110%);
+    }
+
+    100% {
+        transform: translateX(260%);
+    }
+}
+
+@keyframes logoPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.06);
+        opacity: 0.8;
+    }
+}
+
+@keyframes preloaderEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .preloader-content,
+    .preloader-logo,
+    .preloader-progress {
+        animation: none;
+    }
+}
+
+/* =====================================
+   MINHA TRAJETÓRIA - JG DEV
+===================================== */
+
+.timeline {
+    position: relative;
+    width: min(850px, 100%);
+    margin: 70px auto 20px;
+    padding-left: 55px;
+}
+
+/* Linha vertical */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 20px;
+    left: 19px;
+    width: 2px;
+
+    background: linear-gradient(
+        180deg,
+        transparent,
+        #7e22ce,
+        #c084fc,
+        #7e22ce,
+        transparent
+    );
+
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.35);
+}
+
+/* Cada etapa */
+.timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+/* Marcador numerado */
+.timeline-marker {
+    position: absolute;
+    top: 25px;
+    left: -55px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #170e25;
+    border: 2px solid #a855f7;
+
+    color: #d8b4fe;
+    font-size: 12px;
+    font-weight: 800;
+
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
+
+    transition: 0.4s ease;
+}
+
+/* Cartão */
+.timeline-card {
+    position: relative;
+    padding: 28px 32px;
+
+    background: rgba(25, 18, 40, 0.48);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(168, 85, 247, 0.18);
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Etiquetas */
+.timeline-tag {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    color: #c084fc;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* Título */
+.timeline-card h3 {
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 21px;
+}
+
+/* Texto */
+.timeline-card p {
+    color: #aaa3b8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Hover */
+.timeline-item:hover .timeline-card {
+    transform: translateX(9px);
+
+    border-color: rgba(192, 132, 252, 0.55);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(168, 85, 247, 0.12);
+}
+
+.timeline-item:hover .timeline-marker {
+    background: #9333ea;
+    color: #ffffff;
+    transform: scale(1.12);
+
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.55);
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+
+    .timeline {
+        padding-left: 43px;
+        margin-top: 45px;
+    }
+
+    .timeline::before {
+        left: 14px;
+    }
+
+    .timeline-marker {
+        left: -43px;
+        width: 32px;
+        height: 32px;
+        font-size: 10px;
+    }
+
+    .timeline-card {
+        padding: 22px 20px;
+    }
+
+    .timeline-card h3 {
+        font-size: 18px;
+    }
+
+    .timeline-card p {
+        font-size: 13px;
+    }
+
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .timeline-card,
+    .timeline-marker {
+        transition: none;
+    }
+
+    .timeline-item:hover .timeline-card {
+        transform: none;
+    }
+}
+/* ======================================
+   MINHA TRAJETÓRIA - TIMELINE
+====================================== */
+
+.journey-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.journey-timeline {
+    position: relative;
+    max-width: 850px;
+    margin: 65px auto 0;
+    padding-left: 55px;
+}
+
+.journey-timeline::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 20px;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #7e22ce,
+        #c084fc,
+        #7e22ce,
+        transparent
+    );
+    box-shadow: 0 0 15px rgba(168, 85, 247, .35);
+}
+
+.journey-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.journey-marker {
+    position: absolute;
+    left: -55px;
+    top: 25px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #170d24;
+    border: 2px solid #a855f7;
+    color: #d8b4fe;
+    font-size: 12px;
+    font-weight: 800;
+    box-shadow: 0 0 20px rgba(168, 85, 247, .25);
+    z-index: 2;
+    transition: .3s ease;
+}
+
+.journey-card {
+    padding: 28px 30px;
+    border: 1px solid rgba(168, 85, 247, .18);
+    border-radius: 18px;
+    background: rgba(25, 18, 40, .48);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: .4s ease;
+}
+
+.journey-card:hover {
+    transform: translateX(8px);
+    border-color: rgba(192, 132, 252, .55);
+    box-shadow: 0 12px 35px rgba(126, 34, 206, .15);
+}
+
+.journey-item:hover .journey-marker {
+    background: #7e22ce;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.journey-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #c084fc;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.journey-card h3 {
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 21px;
+}
+
+.journey-card p {
+    color: #aaa2b8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+    .journey-timeline {
+        padding-left: 43px;
+        margin-top: 45px;
+    }
+
+    .journey-timeline::before {
+        left: 15px;
+    }
+
+    .journey-marker {
+        left: -43px;
+        width: 34px;
+        height: 34px;
+        font-size: 10px;
+    }
+
+    .journey-card {
+        padding: 22px 20px;
+    }
+
+    .journey-card h3 {
+        font-size: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .journey-card,
+    .journey-marker {
+        transition: none;
     }
 }
