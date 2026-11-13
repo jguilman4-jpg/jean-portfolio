@@ -1816,3 +1816,283 @@ footer > a:last-child:hover {
       bottom: 18px;
     }
   }
+  /* =========================================
+     JEAN GUILMAN.DEV — BLACK & WHITE PREMIUM
+     Identidade: preto forte + preto suave + branco
+  ========================================= */
+  
+  :root {
+    --bg: #050505;
+    --surface: #0b0b0b;
+    --surface-light: #141414;
+  
+    --blue: #ffffff;
+    --blue-light: #e5e5e5;
+    --blue-white: #ffffff;
+  
+    --white: #ffffff;
+    --muted: #999999;
+  
+    --border: rgba(255, 255, 255, 0.10);
+    --glow: rgba(255, 255, 255, 0.08);
+  }
+  
+  /* FUNDO */
+  body {
+    background: #050505;
+    color: #ffffff;
+  }
+  
+  .background-grid {
+    background-image:
+      linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  }
+  
+  .bg-glow,
+  .bg-glow-1,
+  .bg-glow-2,
+  .bg-glow-3 {
+    background: radial-gradient(
+      circle,
+      rgba(255,255,255,.055),
+      transparent 70%
+    );
+  }
+  
+  /* LUZ DO MOUSE */
+  .cursor-glow {
+    background: radial-gradient(
+      circle,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,.025) 40%,
+      transparent 70%
+    );
+  }
+  
+  /* HEADER */
+  header,
+  .navbar,
+  nav {
+    border-color: rgba(255,255,255,.10);
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    color: #ffffff;
+  }
+  
+  /* HERO */
+  .hero-title,
+  .hero-title span,
+  .gradient-text {
+    background: linear-gradient(
+      120deg,
+      #ffffff 10%,
+      #bdbdbd 50%,
+      #ffffff 90%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero-subtitle,
+  .hero-description {
+    color: #a3a3a3;
+  }
+  
+  /* BOTÕES */
+  .btn-primary {
+    background: #ffffff;
+    color: #050505;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 25px rgba(255,255,255,.10);
+  }
+  
+  .btn-primary:hover {
+    background: #d9d9d9;
+    color: #000000;
+    box-shadow: 0 0 35px rgba(255,255,255,.20);
+  }
+  
+  .btn-outline,
+  .btn-secondary {
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,.25);
+    background: rgba(255,255,255,.025);
+  }
+  
+  .btn-outline:hover,
+  .btn-secondary:hover {
+    background: rgba(255,255,255,.10);
+    border-color: #ffffff;
+  }
+  
+  /* CARDS */
+  .code-card,
+  .skill-card,
+  .project-card,
+  .about-card,
+  .timeline-card {
+    background: linear-gradient(
+      145deg,
+      #111111,
+      #080808
+    );
+    border: 1px solid rgba(255,255,255,.10);
+    box-shadow: 0 15px 45px rgba(0,0,0,.35);
+  }
+  
+  .code-card:hover,
+  .skill-card:hover,
+  .project-card:hover,
+  .about-card:hover {
+    border-color: rgba(255,255,255,.35);
+    box-shadow: 0 15px 45px rgba(255,255,255,.055);
+  }
+  
+  /* ÍCONES */
+  .skill-icon,
+  .project-icon,
+  .about-icon {
+    color: #ffffff;
+  }
+  
+  /* TAGS E BADGES */
+  .tag,
+  .tech-tag,
+  .project-tag {
+    color: #e5e5e5;
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.12);
+  }
+  
+  /* SEÇÕES */
+  section {
+    color: #ffffff;
+  }
+  
+  .section-subtitle,
+  .about-description,
+  .project-description {
+    color: #a1a1a1;
+  }
+  
+  /* LINHAS E DIVISORES */
+  hr,
+  .divider,
+  .section-line {
+    border-color: rgba(255,255,255,.12);
+    background: rgba(255,255,255,.12);
+  }
+  
+  /* TIMELINE */
+  .timeline-line {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      #ffffff,
+      transparent
+    );
+  }
+  
+  .timeline-dot {
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(255,255,255,.35);
+  }
+  
+  /* FORMULÁRIO */
+  input,
+  textarea,
+  select {
+    color: #ffffff;
+    background: #101010;
+    border: 1px solid rgba(255,255,255,.15);
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(255,255,255,.07);
+    outline: none;
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    color: #777777;
+  }
+  
+  /* BARRA DE PROGRESSO */
+  .progress-bar,
+  .progress-fill {
+    background: linear-gradient(90deg, #777777, #ffffff);
+  }
+  
+  /* PRELOADER */
+  .preloader {
+    background: #050505;
+  }
+  
+  .preloader-spinner {
+    border-color: rgba(255,255,255,.15);
+    border-top-color: #ffffff;
+  }
+  
+  /* SELEÇÃO DE TEXTO */
+  ::selection {
+    color: #000000;
+    background: #ffffff;
+  }
+  
+  /* SCROLLBAR */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #777777;
+  }
+  
+  /* LINKS */
+  a {
+    color: inherit;
+  }
+  
+  a:hover {
+    color: #d9d9d9;
+  }
+  
+  /* MANTER WHATSAPP VERDE */
+  .whatsapp-float,
+  .whatsapp-button {
+    background: #25D366;
+    color: #ffffff;
+  }
+  
+  .whatsapp-float:hover,
+  .whatsapp-button:hover {
+    background: #1ebe5d;
+  }
+  
+  /* ACESSIBILIDADE */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: .01ms !important;
+      transition-duration: .01ms !important;
+    }
+  }
+  
