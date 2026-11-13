@@ -1,0 +1,313 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Jean Guilman, desenvolvedor web.">
+    <title>Jean Guilman | Desenvolvedor Web</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cursor-glow"></div>
+
+    <header class="header">
+        <a href="#inicio" class="logo">JG<span>.</span></a>
+
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="navbar">
+            <a href="#inicio" class="nav-link active">Início</a>
+            <a href="#sobre" class="nav-link">Sobre</a>
+            <a href="#habilidades" class="nav-link">Habilidades</a>
+            <a href="#projetos" class="nav-link">Projetos</a>
+            <a href="#contato" class="nav-link">Contato</a>
+        </nav>
+
+        <a href="#contato" class="header-button">Vamos conversar ↗</a>
+    </header>
+
+    <main>
+
+        <!-- INÍCIO -->
+        <section class="hero" id="inicio">
+
+            <div class="hero-content reveal">
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    DISPONÍVEL PARA PROJETOS
+                </div>
+
+                <p class="hero-intro">Olá, eu sou</p>
+
+                <h1>Jean <span>Guilman.</span></h1>
+
+                <h2>
+                    Desenvolvedor
+                    <span class="typing"></span>
+                    <span class="typing-cursor">|</span>
+                </h2>
+
+                <p class="hero-description">
+                    Transformo ideias em experiências digitais.
+                    Desenvolvo interfaces modernas, funcionais e
+                    experiências que fazem a diferença na web.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projetos" class="btn btn-primary">
+                        Ver projetos <span>↗</span>
+                    </a>
+
+                    <a href="#sobre" class="btn btn-outline">
+                        Conhecer mais
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                </div>
+
+            </div>
+
+            <div class="hero-visual reveal">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="code-card">
+                    <div class="code-header">
+                        <div class="window-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span>developer.js</span>
+                    </div>
+
+                    <div class="code-content">
+                        <p><span class="purple">const</span> developer = {</p>
+                        <p class="indent">name: <span class="green">'Jean Guilman'</span>,</p>
+                        <p class="indent">role: <span class="green">'Web Developer'</span>,</p>
+                        <p class="indent">skills: [</p>
+                        <p class="indent2"><span class="orange">'HTML'</span>,</p>
+                        <p class="indent2"><span class="orange">'CSS'</span>,</p>
+                        <p class="indent2"><span class="orange">'JavaScript'</span></p>
+                        <p class="indent">],</p>
+                        <p class="indent">passion: <span class="green">true</span></p>
+                        <p>};</p>
+                        <p class="code-comment">// Building the future.</p>
+                    </div>
+                </div>
+
+                <div class="floating-tag tag-one"> &lt; HTML /&gt; </div>
+                <div class="floating-tag tag-two">{ CSS }</div>
+                <div class="floating-tag tag-three">JS ⚡</div>
+            </div>
+
+            <a href="#sobre" class="scroll-indicator">
+                <span></span> ROLE PARA EXPLORAR
+            </a>
+
+        </section>
+
+        <!-- SOBRE -->
+        <section class="section" id="sobre">
+
+            <div class="section-heading reveal">
+                <span class="section-label">01 / SOBRE MIM</span>
+                <h2>Conheça um pouco <span>da minha história.</span></h2>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text reveal">
+                    <h3>Olá! Sou Jean Guilman.</h3>
+
+                    <p>
+                        Sou desenvolvedor com interesse em tecnologia,
+                        programação e criação de experiências digitais.
+                    </p>
+
+                    <p>
+                        Trabalho com HTML, CSS e JavaScript, buscando
+                        construir sites modernos, responsivos e com
+                        atenção especial aos detalhes.
+                    </p>
+
+                    <p>
+                        Meu objetivo é continuar evoluindo, aprendendo
+                        novas tecnologias e transformando ideias em
+                        projetos reais.
+                    </p>
+                </div>
+
+                <div class="about-card reveal">
+                    <div class="about-icon">✦</div>
+                    <h3>Desenvolvimento com propósito.</h3>
+                    <p>Design, tecnologia e criatividade trabalhando juntos.</p>
+                    <span>JEAN GUILMAN.DEV</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section class="section" id="habilidades">
+
+            <div class="section-heading reveal">
+                <span class="section-label">02 / HABILIDADES</span>
+                <h2>Minhas <span>tecnologias.</span></h2>
+                <p>Ferramentas que utilizo para transformar ideias em realidade.</p>
+            </div>
+
+            <div class="skills-grid">
+
+                <article class="skill-card reveal">
+                    <div class="skill-icon html-icon">5</div>
+                    <h3>HTML5</h3>
+                    <p>Estruturação semântica e acessível de páginas web.</p>
+                    <span>DESENVOLVIMENTO WEB</span>
+                </article>
+
+                <article class="skill-card reveal">
+                    <div class="skill-icon css-icon">3</div>
+                    <h3>CSS3</h3>
+                    <p>Interfaces modernas, responsivas e animações.</p>
+                    <span>ESTILIZAÇÃO</span>
+                </article>
+
+                <article class="skill-card reveal">
+                    <div class="skill-icon js-icon">JS</div>
+                    <h3>JavaScript</h3>
+                    <p>Interatividade e funcionalidades dinâmicas.</p>
+                    <span>PROGRAMAÇÃO</span>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- PROJETOS -->
+        <section class="section" id="projetos">
+
+            <div class="section-heading reveal">
+                <span class="section-label">03 / PORTFÓLIO</span>
+                <h2>Projetos em <span>destaque.</span></h2>
+                <p>Um espaço para apresentar minhas criações.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card reveal">
+                    <div class="project-preview preview-one">
+                        <span>01</span>
+                        <div class="preview-content">
+                            <div class="preview-logo">JG.</div>
+                            <h3>Creative<br>Digital.</h3>
+                            <p>DESIGN YOUR FUTURE</p>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <h3>Projeto Portfólio</h3>
+                            <p>Site pessoal moderno e responsivo.</p>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-preview preview-two">
+                        <span>02</span>
+                        <div class="preview-content">
+                            <div class="preview-logo">NOVA</div>
+                            <h3>Technology<br>Store.</h3>
+                            <p>THE NEXT GENERATION</p>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <h3>Loja Virtual</h3>
+                            <p>Conceito de e-commerce tecnológico.</p>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-preview preview-three">
+                        <span>03</span>
+                        <div class="preview-content">
+                            <div class="preview-logo">APP.</div>
+                            <h3>Smart<br>Dashboard.</h3>
+                            <p>CONTROL YOUR WORLD</p>
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <div>
+                            <h3>Dashboard</h3>
+                            <p>Interface de painel administrativo.</p>
+                        </div>
+                        <span class="project-arrow">↗</span>
+                    </div>
+
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="section contact-section" id="contato">
+
+            <div class="contact-box reveal">
+                <span class="section-label">04 / CONTATO</span>
+
+                <h2>Vamos criar algo<br><span>incrível juntos?</span></h2>
+
+                <p>
+                    Tem uma ideia ou projeto em mente?
+                    Entre em contato. Será um prazer conversar!
+                </p>
+
+                <a href="mailto:seuemail@exemplo.com" class="btn btn-primary">
+                    Enviar um e-mail ↗
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="#inicio" class="logo">JG<span>.</span></a>
+        <p>© <span id="year"></span> Jean Guilman. Todos os direitos reservados.</p>
+        <a href="#inicio">VOLTAR AO TOPO ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
